@@ -5,6 +5,10 @@
 
     RewriteEngine On
 
+    # === यो लाइन थप्नुहोस् ===
+    RewriteBase /Files/public/     # यदि subfolder मा छ भने यो अनुसार change गर्नुहोस्
+    # यदि root domain मा छ भने[](http://localhost/) भने RewriteBase / राख्नुहोस् वा हटाउनुहोस्
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
